@@ -1,36 +1,12 @@
 import streamlit as st
 
-# Set blue and white theme using Streamlit config
 st.set_page_config(
     page_title="Life Insurance Requirement Calculator",
     page_icon="💡",
-    layout="centered",
-    initial_sidebar_state="auto"
+    layout="centered"
 )
 
-# Custom CSS for blue and white theme
-st.markdown("""
-    <style>
-        body, .stApp {
-            background-color: #f6fbff;
-        }
-        .stButton>button {
-            background-color: #1976d2;
-            color: white;
-            font-weight: bold;
-        }
-        .st-bb {
-            color: #1976d2;
-        }
-        .st-cb {
-            color: #1976d2;
-        }
-        .st-dc {
-            color: #1976d2;
-        }
-    </style>
-    """, unsafe_allow_html=True)
-
+# Light blue and white styling for headings
 st.markdown("<h1 style='color: #1976d2; text-align: center;'>💡 Life Insurance Requirement Calculator</h1>", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: center; color: #1976d2;'>Estimate your ideal insurance cover in minutes</h4>", unsafe_allow_html=True)
 
@@ -102,4 +78,3 @@ if st.button("Calculate Insurance Requirement"):
         st.markdown(f"<h3 style='color: #1976d2;'>Expense-Based Insurance Required: ₹ {round(G, 2):,.2f}</h3>", unsafe_allow_html=True)
         st.markdown(f"<h3 style='color: #1976d2;'>Income-Based Insurance Required: ₹ {round(I, 2):,.2f}</h3>", unsafe_allow_html=True)
         st.info("You may choose the higher of the two values above as your ideal insurance cover.")
-
