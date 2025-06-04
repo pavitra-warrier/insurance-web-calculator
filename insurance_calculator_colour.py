@@ -1,23 +1,22 @@
 import streamlit as st
 
-# Inject Custom Blue & White Theme
+# Force Light Theme and Style Inputs/Headings
 st.markdown(
     """
     <style>
+    /* Force background to white */
     .stApp {
         background-color: #ffffff;
         color: #003366;
     }
 
-    h1, h2, h3 {
+    /* Style all section headers */
+    h1, h2, h3, .stHeader {
+        font-weight: 800;
         color: #003366;
     }
 
-    label, .stSelectbox label, .stNumberInput label {
-        font-weight: 600;
-        color: #003366;
-    }
-
+    /* Force input fields to be light-colored */
     input, textarea, select {
         background-color: #f0f8ff !important;
         color: #000000 !important;
@@ -26,6 +25,14 @@ st.markdown(
         padding: 6px;
     }
 
+    /* Force selectbox dropdown background */
+    div[data-baseweb="select"] > div {
+        background-color: #f0f8ff !important;
+        color: black !important;
+        border-radius: 8px !important;
+    }
+
+    /* Style button */
     .stButton>button {
         background-color: #007BFF;
         color: white;
@@ -43,6 +50,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 st.title("Life Insurance Requirement Calculator")
 
